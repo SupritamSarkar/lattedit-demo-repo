@@ -1,0 +1,462 @@
+\documentclass[letterpaper,10pt]{article}
+
+%========================================================
+% PACKAGES
+%========================================================
+
+\usepackage{latexsym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\IfFileExists{fontawesome5.sty}{
+  \usepackage{fontawesome5}
+}{}
+\providecommand{\faMapMarker}{\textbullet}
+\providecommand{\faPhone}{\textbf{P:}}
+\providecommand{\faEnvelope}{\textbf{@}}
+\providecommand{\faGithub}{\textbf{Git:}}
+\providecommand{\faCode}{\textbf{</>}}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{array}
+\input{glyphtounicode}
+
+%========================================================
+% PAGE SETUP
+%========================================================
+
+\pagestyle{empty}
+
+\setlength{\topmargin}{0pt}
+\addtolength{\topmargin}{-\headheight}
+\addtolength{\topmargin}{-\headsep}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-2in}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.10in}
+
+\addtolength{\topmargin}{-0.72in}
+\addtolength{\textheight}{1.42in}
+
+\urlstyle{same}
+\raggedright
+
+\setlength{\tabcolsep}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlength{\multicolsep}{0pt}
+\setlength{\columnsep}{10pt}
+
+%========================================================
+% SECTION FORMAT
+%========================================================
+
+\makeatletter
+\renewcommand{\section}{
+  \@ifstar\@mysection\@mysection
+}
+\newcommand{\@mysection}[1]{%
+  \par\vspace{4pt}%
+  \phantomsection
+  {\scshape\raggedright\normalsize\bfseries #1\strut\par}%
+  \nopagebreak
+  \vspace{1pt}%
+  {\color{black}\hrule height 0.4pt}%
+  \nopagebreak
+  \vspace{4pt}%
+}
+\makeatother
+
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%========================================================
+% LIST SETTINGS
+%========================================================
+
+\setlist[itemize]{
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+%========================================================
+% CUSTOM COMMANDS
+%========================================================
+
+\newcommand{\resumeItem}[1]{
+    \item{\fontsize{8.8}{10}\selectfont #1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]{%
+        l@{\extracolsep{\fill}}r
+    }
+        \textbf{\fontsize{9.2}{10.5}\selectfont #1}
+        &
+        {\fontsize{8.8}{10}\selectfont #2}
+        \\
+        \textit{\fontsize{8.8}{10}\selectfont #3}
+        &
+        \textit{\fontsize{8.8}{10}\selectfont #4}
+    \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.98\textwidth}{
+        l@{\extracolsep{\fill}}r
+    }
+        {\fontsize{8.9}{10}\selectfont #1}
+        &
+        {\fontsize{8.8}{10}\selectfont #2}
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[
+        leftmargin=0.10in,
+        label={},
+        itemsep=1pt,
+        topsep=0pt,
+        parsep=0pt,
+        partopsep=0pt
+    ]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+    \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}[
+        leftmargin=0.17in,
+        itemsep=0pt,
+        topsep=0pt,
+        parsep=0pt,
+        partopsep=0pt
+    ]
+}
+
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}
+}
+
+%========================================================
+% DOCUMENT
+%========================================================
+
+\begin{document}
+
+%========================================================
+% HEADER
+%========================================================
+
+\begin{center}
+
+\begin{minipage}[c]{0.11\textwidth}
+    \centering
+    \IfFileExists{Screenshot From 2026-08-25 18-59-52.png}{
+        \includegraphics[
+            width=0.78\linewidth,
+            height=0.78\linewidth,
+            keepaspectratio
+        ]{Screenshot From 2026-08-25 18-59-52.png}
+    }{}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.86\textwidth}
+    \centering
+
+    {\fontsize{21}{22}\selectfont\scshape Sunrit Ghosh}
+
+    \vspace{4pt}
+
+    {\fontsize{8.8}{10}\selectfont
+    \faMapMarker\ Kolkata, West Bengal
+    \ $|$ \ 
+    \faPhone\ +91-7439542435
+    \ $|$ \ 
+    \faEnvelope\ 
+    \href{mailto:ghoshsunrit26@gmail.com}
+    {ghoshsunrit26@gmail.com}
+    \ $|$ \
+    \href{https://github.com/sunritt}
+    {\faGithub\ GitHub}
+    \ $|$ \
+    \href{https://leetcode.com/u/sunrit_/}{%
+    \faCode\ LeetCode}
+    }
+
+\end{minipage}
+
+\end{center}
+
+\vspace{4pt}
+
+%========================================================
+% EDUCATION
+%========================================================
+
+\section{EDUCATION}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Indian Institute of Engineering Science and Technology, Shibpur}
+{2023 -- 2027}
+{B.Tech- Information Technology - CGPA- 7.73}
+{Kolkata, India}
+
+\resumeSubheading
+{DPS Ruby Park}
+{2021 -- 2023}
+{Higher Secondary (CBSE) -- \textbf{95.4\%} $|$ JEE Main: \textbf{98.76 percentile}}
+{Kolkata, India}
+
+\resumeSubheading
+{Hartley Higher Secondary School}
+{2021}
+{Secondary Education (WBBSE) -- \textbf{96.86\%}}
+{Kolkata, India}
+
+\resumeSubHeadingListEnd
+
+%========================================================
+% COURSEWORK
+%========================================================
+
+\section{COURSEWORK}
+
+\begin{multicols}{3}
+
+\begin{itemize}[
+    leftmargin=0.08in,
+    label={},
+    itemsep=0pt,
+    topsep=-2pt,
+    parsep=0pt,
+    partopsep=0pt
+]
+
+\fontsize{8.8}{9.5}\selectfont
+
+\item Data Structures \& Algorithms
+\item Operating Systems
+\item Machine Learning
+\item Object Oriented Programming
+\item Database Management Systems
+\item Computer Networks
+\item Computer Architecture
+
+\end{itemize}
+
+\end{multicols}
+
+%========================================================
+% INTERNSHIP
+%========================================================
+
+\section{INTERNSHIP EXPERIENCE}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Eveready Industries India Limited}
+{June 2026 -- July 2026}
+{Data Science / AI Intern}
+{Kolkata, India}
+
+\resumeItemListStart
+
+\resumeItem{
+Developed AI/ML solutions for demand forecasting and customer sentiment intelligence, integrating machine learning, NLP, Generative AI, and interactive dashboards.
+}
+
+\resumeItem{
+Analyzed sales, product, market, and customer-review data to generate actionable insights for forecasting and product performance evaluation.
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%========================================================
+% PROJECTS
+%========================================================
+
+\section{PROJECTS / RESEARCH WORK}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Eveready Demand Forecasting \& Market Intelligence Dashboard}
+$|$ \textit{Python, XGBoost, ARIMA, SARIMA}}{}
+
+\resumeItemListStart
+
+\resumeItem{
+Built an end-to-end pipeline for \textbf{13-week and 1-year demand forecasting} of batteries, flashlights, and lighting products across plants, regions, materials, and sales channels.
+}
+
+\resumeItem{
+Engineered lag, rolling, EWMA, Fourier, cyclical, seasonal, and Indian festival features; combined \textbf{ARIMA, SARIMA, and XGBoost} through weighted ensemble forecasting.
+}
+
+\resumeItem{
+Integrated \textbf{Google Trends, Indian holidays, and stock-market trends} to model market variability and dynamically adjust baseline forecasts.
+}
+
+\resumeItem{
+Developed an interactive dashboard for forecast visualization, market trends, model outputs, and business metrics.
+}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Eveready Product Review Sentiment Intelligence Platform}
+$|$ \textit{Python, PyTorch, BiLSTM, Qwen, Flask}}{}
+
+\resumeItemListStart
+
+\resumeItem{
+Analyzed \textbf{3,851 reviews across 20 Eveready products} from Amazon and Flipkart using Selenium-based scraping and an automated Pandas/NLTK preprocessing pipeline.
+}
+
+\resumeItem{
+Developed a custom \textbf{BiLSTM with Bahdanau Attention} for 3-class sentiment classification using customer ratings as weak supervision and stratified train/validation/test splits.
+}
+
+\resumeItem{
+Implemented rule-based opinion mining across \textbf{9 product aspects} and integrated \textbf{Qwen 2.5-0.5B} for product/aspect summaries and real-time AI customer-review queries.
+}
+
+\resumeItem{
+Built an interactive analytics dashboard with sentiment KPIs, trends, aspect insights, searchable reviews, customer quotes, and anomaly alerts.
+}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Exploring Vision Transformers}
+$|$ \textit{PyTorch, Transformers, Computer Vision}}{}
+
+\resumeItemListStart
+
+\resumeItem{
+Working under Prof. Santi Prasad Maity at IIEST Shibpur on \textbf{Vision Transformers (ViT)} and self-attention mechanisms for image detection applications.
+}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{SMS Spam Classifier}
+$|$ \textit{Python, Scikit-Learn, Pandas, NLP}
+$|$ \href{https://sms-spam-classifier-a58lpv7zozszq2ucnbh8zm.streamlit.app/}{Live Demo}
+$|$ \href{https://github.com/sunritt/Sms-Spam-Classifier}{GitHub}}{}
+
+\resumeItemListStart
+
+\resumeItem{
+Developed a text classification model using \textbf{TF-IDF vectorization} and \textbf{Multinomial Naive Bayes} to distinguish spam messages from legitimate messages.
+}
+
+\resumeItem{
+Performed text preprocessing, data cleaning, exploratory data analysis, and model evaluation using \textbf{Pandas, Scikit-Learn, and Matplotlib}.
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%========================================================
+% ACHIEVEMENTS
+%========================================================
+
+\section{ACHIEVEMENTS \& PARTICIPATION}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Diversion 2k26}
+$|$ \textit{State Level Devfolio Hackathon}}
+{February 2026}
+
+\resumeItemListStart
+
+\resumeItem{
+Collaborated to conceptualize and build \textbf{Adaalat} within 36 hours and pitched the solution to industry experts, focusing on scalability and real-world impact.
+}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{AI \& Web Development Workshop}
+$|$ \textit{Kshitij, IIT Kharagpur}}
+{May 2025}
+
+\resumeItemListStart
+
+\resumeItem{
+Completed hands-on labs integrating machine learning APIs with React-based front-ends.
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%========================================================
+% TECHNICAL SKILLS
+%========================================================
+
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}[
+    leftmargin=0.10in,
+    label={},
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+]
+
+\fontsize{8.8}{9.8}\selectfont
+
+\item{
+\textbf{Languages:}
+Python, Java, C, C++, JavaScript, SQL
+}
+
+\item{
+\textbf{ML / AI:}
+PyTorch, Scikit-Learn, XGBoost, ARIMA, SARIMA, NLTK, NLP, BiLSTM, Transformers, Qwen
+}
+
+\item{
+\textbf{Web / Backend:}
+ReactJS, NodeJS, ExpressJS, Flask, MongoDB, TailwindCSS
+}
+
+\item{
+\textbf{Tools:}
+Git, GitHub, Jupyter Notebook, VS Code, PyCharm, Linux Shell
+}
+
+\end{itemize}
+
+\end{document}
